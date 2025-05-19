@@ -1,0 +1,28 @@
+/* 隐藏原始水印 */
+
+.watermark {
+    display: none !important;
+}
+
+
+/* 自定义轻量化水印 */
+
+#custom-watermark {
+    content: "AI 也可能会犯错。请核查重要信息。";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: #888;
+    padding: 5px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1000;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#custom-watermark.hidden {
+    opacity: 0;
+}
